@@ -16,7 +16,9 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">
+                    <img src="./img/duck.png" alt="Bootstrap" width="40" height="40">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -25,32 +27,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                            <a class="nav-link" href="#">Anagrafia Utenti</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="#">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true">Help</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search" />
+                        <button class="btn btn-outline-light" type="submit">Cerca</button>
                     </form>
                 </div>
             </div>
@@ -58,11 +49,21 @@
     </header>
     <main>
         <div class="container py-3">
-            <div class="d-flex align-items-center justify-content-between">
-                <h2 class="display-6">Catalogo Libri</h2>
-                <button type="button" class="btn btn-primary btn-sm">Aggiungi libro</button>
-            </div>
             <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-between py-3">
+                        <h4 class="">Catalogo Libri</h4>
+                        <button type="button" class="btn btn-primary"
+                            style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                            Aggiungi Libro
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-3">
+            <div class="row">
+
                 <div class="col">
                     <table class="table table-striped">
                         <thead>
@@ -77,120 +78,168 @@
                             <tr>
                                 <td>I pilastri dells terra</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
 
                             </tr>
                             <tr>
                                 <td>I promessi sposi</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Il signore degli anelli</td>
                                 <td>18/10/2023</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-warning text-light"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        In prestito
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Harry Potter e la pietra filosofale</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
 
                             </tr>
                             <tr>
                                 <td>Il codice Da Vinci</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-danger"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Non disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Shining</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>La divina commedia </td>
                                 <td>21/09/2023</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-warning text-light"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        In prestito
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
 
                             </tr>
                             <tr>
                                 <td>Il trono di spade</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Il mondo di Sofia</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-danger"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Non disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
                                 <td>25/07/2023</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-warning text-light"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        In prestito
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
 
                             </tr>
                             <tr>
                                 <td>Il piccolo principe</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>La storia infinita</td>
                                 <td>-</td>
-                                <td><button type="button" class="btn btn-primary"
-                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Custom button
+                                <td><button type="button" class="btn btn-success"
+                                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        Disponibile
                                     </button></td>
-                                <td>@mdo</td>
+                                <td><button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-pen" style="color: #6c757d;"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa-solid fa-trash" style="color: #6c757d;"></i></button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
             </div>
+        </div>
         </div>
     </main>
 
